@@ -9,12 +9,63 @@
     <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+    <div class="bgimg"></div>
+    <div class="main">
     <header>
-        <img> <!--mute/toggle volume button-->
-        <img> <!--help button-->
+        <div class="togglevolume">
+            <img class="volume" src="imgs/volumebtn.png" width="125"> <!--mute/toggle volume button-->
+            <img class="volumemute" src="imgs/volumebtnmuted.png" width="125">
+        </div>
+        <div class="infobutton">
+            <img class="info" src="imgs/infobtn.png" width="125"> <!--help button-->
+            <img class="infohover" src="imgs/infobtnhover.png" width="125">
+        </div>
     </header>
-    <section>
+    <section class="introtext">
         <h1>Which Studio Ghibli Character are you?</h1>
     </section>
+    <div class="calendar">
+        <input type="date" id="date">
+        <button type="submit" name="btn">Submit</button>
+    </div>
+    <section class="zodiacbuttons">
+        <button>
+            <img src="imgs/arriettybtn.png" alt="arrietty" />
+        </button>
+        <button>
+            <img src="imgs/hakubtn.png" alt="haku" />
+        </button>
+        <button>
+            <img src="imgs/sophiebtn.png" alt="sophie" />
+        </button>
+        <button>
+            <img src="imgs/jijibtn.png" alt="jiji" />
+        </button>
+        <button>
+            <img src="imgs/kikibtn.png" alt="kiki" />
+        </button>
+        <button>
+            <img src="imgs/howlbtn.png" alt="howl" />
+        </button>
+        <button>
+            <img src="imgs/totorobtn.png" alt="totoro" />
+        </button>
+        <button>
+            <img src="imgs/calciferbtn.png" alt="calcifer" />
+        </button>
+        <button>
+            <img src="imgs/sousukebtn.png" alt="sousuke" />
+        </button>
+        <button>
+            <img src="imgs/chihirobtn.png" alt="chihiro" />
+        </button>
+        <button>
+            <img src="imgs/ponyobtn.png" alt="ponyo" />
+        </button>
+        <button>
+            <img src="imgs/nofacebtn.png" alt="no face" />
+        </button>
+    </section>
+    </div>
 </body>
 </html>
