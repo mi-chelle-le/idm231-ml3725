@@ -6,10 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Studio Ghibli Zodiac</title>
     <link href="css/normalize.css" rel="normalize" type="text/css">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <div class="bgimg"></div>
     <div class="main">
     <header>
         <div class="togglevolume">
@@ -21,51 +20,98 @@
             <img class="infohover" src="imgs/infobtnhover.png" width="125">
         </div>
     </header>
-    <section class="introtext">
+    <div class="introtext">
         <h1>Which Studio Ghibli Character are you?</h1>
-    </section>
-    <div class="calendar">
-        <input type="date" id="date">
-        <button type="submit" name="btn">Submit</button>
     </div>
-    <section class="zodiacbuttons">
-        <button>
-            <img src="imgs/arriettybtn.png" alt="arrietty" />
-        </button>
-        <button>
-            <img src="imgs/hakubtn.png" alt="haku" />
-        </button>
-        <button>
-            <img src="imgs/sophiebtn.png" alt="sophie" />
-        </button>
-        <button>
-            <img src="imgs/jijibtn.png" alt="jiji" />
-        </button>
-        <button>
-            <img src="imgs/kikibtn.png" alt="kiki" />
-        </button>
-        <button>
-            <img src="imgs/howlbtn.png" alt="howl" />
-        </button>
-        <button>
-            <img src="imgs/totorobtn.png" alt="totoro" />
-        </button>
-        <button>
-            <img src="imgs/calciferbtn.png" alt="calcifer" />
-        </button>
-        <button>
-            <img src="imgs/sousukebtn.png" alt="sousuke" />
-        </button>
-        <button>
-            <img src="imgs/chihirobtn.png" alt="chihiro" />
-        </button>
-        <button>
-            <img src="imgs/ponyobtn.png" alt="ponyo" />
-        </button>
-        <button>
-            <img src="imgs/nofacebtn.png" alt="no face" />
-        </button>
-    </section>
+    <div class="input-bday">
+        <section>
+            <p>Enter Your Birthday</p>
+        </section>
+        <section>
+            <input class="date-input" type="date" id="date-input">
+            <button class="submit-btn" id="submit-btn">&#8250;</button>
+        </section>
     </div>
+    <div class="zodiacbuttons">
+        <div>
+            <button id="sousuke">
+                <img src="imgs/sousukebtn.png" alt="sousuke" />
+            </button>
+        </div>
+        <div>
+            <button id="chihiro">
+                <img src="imgs/chihirobtn.png" alt="chihiro" />
+            </button>
+        </div>
+        <div>
+            <button id="sophie">
+                <img src="imgs/sophiebtn.png" alt="sophie" />
+            </button>
+        </div>
+        <div>
+            <button id="totoro">
+                <img src="imgs/totorobtn.png" alt="totoro" />
+            </button>
+        </div>
+        <div>
+            <button id="noface">
+                <img src="imgs/nofacebtn.png" alt="no face" />
+            </button>
+        </div>
+        <div>
+            <button id="kiki">
+                <img src="imgs/kikibtn.png" alt="kiki" />
+            </button>
+        </div>
+        <div>
+            <button id="howl">
+                <img src="imgs/howlbtn.png" alt="howl" />
+            </button>
+        </div>
+        <div>
+            <button id="haku">
+                <img src="imgs/hakubtn.png" alt="haku" />
+            </button>
+        </div>
+        <div>
+            <button id="jiji">
+                <img src="imgs/jijibtn.png" alt="jiji" />
+            </button>
+        </div>
+        <div>
+            <button id="calcifer">
+                <img src="imgs/calciferbtn.png" alt="calcifer" />
+            </button>
+        </div>
+        <div>
+            <button id="ponyo">
+                <img src="imgs/ponyobtn.png" alt="ponyo" />
+            </button>
+        </div>
+        <div>
+            <button id="arrietty">
+                <img src="imgs/arriettybtn.png" alt="arrietty" />
+             </button>
+        </div>
+    </div>
+    </div>
+
+    <!--modal pop up containing zodiac image and description-->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <button class="close-btn" type="button">&#x2715;</button>
+            </div>
+            <div>
+                <img class="char-img" src="imgs/"> <!--insert png of chars-->
+            </div>
+            <div>
+                <h2 class="char-name"></h2>
+                <h3 class="char-date"></h3>
+                <p class="char-desc"></p>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
 </body>
 </html>
