@@ -1,12 +1,12 @@
 @font-face {
     font-family: 'broady';
-    src: url('../fonts/BROADY.woff2') format('woff2'),
-        url('../fonts/BROADY.woff') format('woff');
+    src: url('fonts/BROADY.woff2') format('woff2'),
+        url('fonts/BROADY.woff') format('woff');
 }
 
 @font-face {
     font-family: 'broady';
-    src: url('../fonts/broady.ttf') format('truetype');
+    src: url('fonts/broady.ttf') format('truetype');
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
@@ -29,7 +29,7 @@
 }
 
 body {
-    background: url(../imgs/ghiblibackground.jpg) no-repeat center center fixed;
+    background: url(imgs/ghiblibackground.jpg) no-repeat center center fixed;
     background-size: cover;
     font-family: var(--font-serif);
     color: #fefaf6;
@@ -198,7 +198,7 @@ input {
 .popup-content {
     width: 950px;
     height: 633px;
-    background-image: url(../imgs/popupbg.png);
+    background-image: url(imgs/popupbg.png);
     background-size: cover;
     position: absolute;
     top: 50%;
