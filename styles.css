@@ -9,7 +9,9 @@
     src: url('fonts/broady.ttf') format('truetype');
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
 
 :root {
     --background: #fefaf6;
@@ -18,7 +20,7 @@
     --textcolor: #351910;
     --: #252525;
 
-    --font-serif: "Poppins", Verdana, Tahoma, serif;
+    --font-serif: "Poppins", "Montserrat", Verdana, Tahoma, serif;
     --font-bold: "broady", var(--font-serif);
 }
 
@@ -183,7 +185,7 @@ input {
 
 /* ----------modal pop-up containing character info---------- */
 
-.popup {
+.popup, .popup-info {
     position: absolute; 
     left: 0;
     top: 0;
@@ -225,7 +227,7 @@ input {
     margin-bottom: -30px;
 }
 
-.popup h2 {
+.popup h2, .popup-info h2 {
     font-family: var(--font-bold);
     font-size: 2.75rem;
     font-weight: 300;
@@ -236,7 +238,7 @@ input {
     margin: 10px;
 }
 
-.popup p {
+.popup p, .popup-info p {
     padding: 0 50px;
     font-size: 1.05rem;
 }
@@ -245,7 +247,7 @@ input {
     justify-content: right;
     margin-bottom: -30px;
 }
-.popup button{
+.popup button, .popup-info button {
     padding: 5px 10px;
     border: none;
     font-size: 26px;
@@ -257,3 +259,19 @@ input {
     cursor: pointer;
 }
 
+.popup-info p{
+    margin: 25px;
+    margin-left: 125px;
+    text-align: left;
+    font-size: 1.25rem;
+    margin-bottom: 0px;
+}
+
+.info-img-div{
+    text-align: right;
+}
+
+.info-img{
+    width: 275px;
+    margin-right: 50px;
+}

@@ -1,4 +1,18 @@
+//info button ----------------------------------------------
+const infoBtn = document.querySelector('.infohover');
+const popupInfo = document.querySelector('.popup-info');
 
+infoBtn.addEventListener('click', function () {
+    popupInfo.style.visibility = 'visible';
+});
+
+const closeBtnInfo = document.querySelector('.close-btn-info');
+
+closeBtnInfo.addEventListener('click', function() {
+    popupInfo.style.visibility='hidden';
+});
+
+//clicking on character buttons ----------------------------------------------
 const sousuke = document.getElementById('sousuke');
 const chihiro = document.getElementById('chihiro');
 const sophie = document.getElementById('sophie');
@@ -108,17 +122,20 @@ arrietty.addEventListener('click', function () {
     desc.innerHTML='You are ambitious and love going on adventures. You can be impulsive at times but you are not afraid to stand up for what you believe in.';
 });
 
+//defining innerHTML for popup ----------------------------------------------
 const img = document.querySelector('.char-img');
 const title = document.querySelector('.char-name');
 const date = document.querySelector('.char-date');
 const desc = document.querySelector('.char-desc'); 
 
+//defining submit for date input and close button for popup ----------------------------------------------
 const submit = document.querySelector('.submit-btn');
 const dateInput = document.querySelector('.date-input');
 
 const popup = document.getElementById('popup');
 const closeBtn = document.querySelector('.close-btn');
 
+//zodiac algorithm ----------------------------------------------
 submit.addEventListener('click', function () {
     const birthday = new Date(dateInput.value);
     const month = birthday.getMonth() + 1;
@@ -186,11 +203,9 @@ submit.addEventListener('click', function () {
         date.innerHTML='January 20 - February 18';
         desc.innerHTML='You are intelligent, curious and loyal. You love going on adventures and are always willing to protect those who are close to you.';
     } 
-
 });
 
 closeBtn.addEventListener('click', function() {
     popup.style.visibility='hidden';
 });
-
 
