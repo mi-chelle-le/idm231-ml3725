@@ -54,23 +54,24 @@ header {
     position: relative;
     display: inline-block;
     overflow: hidden;
+    cursor: pointer;
 }
-
-img.volumemute {
+/*
+img.volume {
     position: absolute;
     top: 0;
     left: 0;
     opacity: 0;
 }
 
-.togglevolume:hover img{
+.togglevolumemute:hover img{
     opacity: 0;
     cursor: pointer;
 }
 
-.togglevolume:hover img.volumemute {
+.togglevolume:hover img.volume {
     opacity: 1;
-}
+}*/
 
 .infobutton {
     position: relative;
