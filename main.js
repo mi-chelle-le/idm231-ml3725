@@ -269,10 +269,11 @@ submit.addEventListener('click', function () {
         desc.innerHTML='You are intelligent, curious and loyal. You love going on adventures and are always willing to protect those who are close to you.';
         audio.src='audios/sousuke.mp3';
         audio.play();
-    } 
+    } else {
+        popup.style.visibility="hidden";
+    }
 });
 
 closeBtn.addEventListener('click', function() {
     popup.style.visibility='hidden';
 });
-
