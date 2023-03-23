@@ -1,12 +1,11 @@
-//info button ----------------------------------------------
+//info button & popup with instructions ----------------------------------------------
 const infoBtn = document.querySelector('.infohover');
 const popupInfo = document.querySelector('.popup-info');
+const closeBtnInfo = document.querySelector('.close-btn-info');
 
 infoBtn.addEventListener('click', function () {
     popupInfo.style.visibility = 'visible';
 });
-
-const closeBtnInfo = document.querySelector('.close-btn-info');
 
 closeBtnInfo.addEventListener('click', function() {
     popupInfo.style.visibility='hidden';
@@ -15,6 +14,7 @@ closeBtnInfo.addEventListener('click', function() {
 // toggle background music ------------------------------------------------
 const bgMusic = new Audio('audios/onesummersday.mp3')
 bgMusic.loop = true;
+
 const toggleMusic = document.querySelector('.volumebtn');
 const volumeMute = toggleMusic.src;
 const volumePlay = 'imgs/volumebtn.png';
@@ -58,7 +58,7 @@ chihiro.addEventListener('click', function () {
     title.innerHTML='Chihiro';
     img.src='imgs/chihiro.png';
     date.innerHTML='February 19 - March 20';
-    desc.innerHTML='You always look for the good in people, showing how considerate you are. You are sensitive to other people\'s feelings and are willing to put your fears aside to protect your friends and family.';
+    desc.innerHTML='You always look for the good in people. You are sensitive to other people\'s feelings and are willing to put your fears aside to protect your friends and family.';
     audio.src='audios/chihiro.mp3';
     audio.play();
 });
@@ -139,7 +139,7 @@ calcifer.addEventListener('click', function () {
     title.innerHTML='Calcifer';
     img.src='imgs/calcifer.png';
     date.innerHTML='October 24 - November 21';
-    desc.innerHTML='You hate when others try to control your life and are hesitant with trusting people, but find yourself deeply caring about those you form connections with. You always see your promises through, proving your great sense of loyalty.'; 
+    desc.innerHTML='You find yourself deeply caring about those you form connections with. You always see your promises through, proving your great sense of loyalty.'; 
     audio.src='audios/calcifer.mp3';
     audio.play();
 });
@@ -179,7 +179,7 @@ const popup = document.getElementById('popup');
 const closeBtn = document.querySelector('.close-btn');
 
 //zodiac algorithm ----------------------------------------------
-submit.addEventListener('click', function () {
+submit.addEventListener('click', function() {
     const birthday = new Date(dateInput.value);
     const month = birthday.getMonth() + 1;
     const day = birthday.getDate();
@@ -203,7 +203,7 @@ submit.addEventListener('click', function () {
         title.innerHTML='Calcifer';
         img.src='imgs/calcifer.png';
         date.innerHTML='October 24 - November 21';
-        desc.innerHTML='You hate when others try to control your life and are hesitant with trusting people, but find yourself deeply caring about those you form connections with. You always see your promises through, proving your great sense of loyalty.'; 
+        desc.innerHTML='You find yourself deeply caring about those you form connections with. You always see your promises through, proving your great sense of loyalty.'; 
         audio.src='audios/calcifer.mp3';
         audio.play();
     } else if ((month === 9 && day >= 22) || (month === 10 && day <= 23)) {
@@ -259,7 +259,7 @@ submit.addEventListener('click', function () {
         title.innerHTML='Chihiro';
         img.src='imgs/chihiro.png';
         date.innerHTML='February 19 - March 20';
-        desc.innerHTML='You always look for the good in people, showing how considerate you are. You are sensitive to other people\'s feelings and are willing to put your fears aside to protect your friends and family.';
+        desc.innerHTML='You always look for the good in people. You are sensitive to other people\'s feelings and are willing to put your fears aside to protect your friends and family.';
         audio.src='audios/chihiro.mp3';
         audio.play();
     } else if ((month === 1 && day >= 19) || (month === 2 && day <= 18)) {
@@ -270,10 +270,19 @@ submit.addEventListener('click', function () {
         audio.src='audios/sousuke.mp3';
         audio.play();
     } else {
-        popup.style.visibility="hidden";
+        popupError.style.visibility="visible";
+        popup.style.visibility='hidden';
     }
 });
 
 closeBtn.addEventListener('click', function() {
     popup.style.visibility='hidden';
+});
+
+// error pop up for when user inputs invalid date ------------------------------------------------
+const popupError = document.querySelector('.popup-error');
+const closeBtnError = document.querySelector('.close-btn-error');
+
+closeBtnError.addEventListener('click', function() {
+  popupError.style.visibility='hidden';
 });

@@ -11,87 +11,89 @@
 <body>
     <div class="main">
     <header>
+        <!--toggle background music button-->
         <div class="togglevolume">
-            <!--<img class="volumemute" src="imgs/volumebtnmuted.png" width="115">--> <!--mute/toggle volume button-->
-           <!-- <img class="volume" src="imgs/volumebtn.png" width="115"> -->
            <img class="volumebtn" src="imgs/volumebtnmuted.png" width="115" alt="toggle background music button">
         </div>
+        <!--help button-->
         <div class="infobutton">
-            <img class="info" src="imgs/infobtn.png" width="115"> <!--help button-->
-            <img class="infohover" src="imgs/infobtnhover.png" width="115">
+            <img class="info" src="imgs/infobtn.png" width="115" alt="info button for instructions">
+            <img class="infohover" src="imgs/infobtnhover.png" width="115" alt="info button for instructions">
         </div>
     </header>
+    <!--title section & birthday input-->
     <div class="introtext">
         <h1>Which Studio Ghibli Character are you?</h1>
     </div>
     <div class="input-bday">
-        <section>
+        <div>
             <p>Enter Your Birthday</p>
-        </section>
-        <section>
-            <input class="date-input" type="date" id="date-input">
+        </div>
+        <div>
+            <input class="date-input" type="date" id="date-input" required>
             <button class="submit-btn" id="submit-btn">&#8250;</button>
-        </section>
+        </div>
     </div>
+    <!--zodiac character buttons-->
     <div class="zodiacbuttons">
         <div>
             <button id="sousuke">
-                <img src="imgs/sousukebtn.png" alt="sousuke" />
+                <img src="imgs/sousukebtn.png" alt="sousuke">
             </button>
         </div>
         <div>
             <button id="chihiro">
-                <img src="imgs/chihirobtn.png" alt="chihiro" />
+                <img src="imgs/chihirobtn.png" alt="chihiro">
             </button>
         </div>
         <div>
             <button id="sophie">
-                <img src="imgs/sophiebtn.png" alt="sophie" />
+                <img src="imgs/sophiebtn.png" alt="sophie">
             </button>
         </div>
         <div>
             <button id="totoro">
-                <img src="imgs/totorobtn.png" alt="totoro" />
+                <img src="imgs/totorobtn.png" alt="totoro">
             </button>
         </div>
         <div>
             <button id="noface">
-                <img src="imgs/nofacebtn.png" alt="no face" />
+                <img src="imgs/nofacebtn.png" alt="no face">
             </button>
         </div>
         <div>
             <button id="kiki">
-                <img src="imgs/kikibtn.png" alt="kiki" />
+                <img src="imgs/kikibtn.png" alt="kiki">
             </button>
         </div>
         <div>
             <button id="howl">
-                <img src="imgs/howlbtn.png" alt="howl" />
+                <img src="imgs/howlbtn.png" alt="howl">
             </button>
         </div>
         <div>
             <button id="haku">
-                <img src="imgs/hakubtn.png" alt="haku" />
+                <img src="imgs/hakubtn.png" alt="haku">
             </button>
         </div>
         <div>
             <button id="jiji">
-                <img src="imgs/jijibtn.png" alt="jiji" />
+                <img src="imgs/jijibtn.png" alt="jiji">
             </button>
         </div>
         <div>
             <button id="calcifer">
-                <img src="imgs/calciferbtn.png" alt="calcifer" />
+                <img src="imgs/calciferbtn.png" alt="calcifer">
             </button>
         </div>
         <div>
             <button id="ponyo">
-                <img src="imgs/ponyobtn.png" alt="ponyo" />
+                <img src="imgs/ponyobtn.png" alt="ponyo">
             </button>
         </div>
         <div>
             <button id="arrietty">
-                <img src="imgs/arriettybtn.png" alt="arrietty" />
+                <img src="imgs/arriettybtn.png" alt="arrietty">
              </button>
         </div>
     </div>
@@ -104,7 +106,7 @@
                 <button class="close-btn" type="button">&#x2715;</button>
             </div>
             <div>
-                <img class="char-img" src="imgs/"> <!--insert png of chars-->
+                <img class="char-img" src="imgs/" alt="character image">
             </div>
             <div>
                 <h2 class="char-name"></h2>
@@ -124,11 +126,27 @@
             <div>
                 <h2>Instructions</h2>
                 <p>1. Enter your birthday into the date input.</p>
-                <p>2. Click the arrow button.</p>
+                <p>2. Click the arrow button to submit.</p>
                 <p>3. See which character you were paired with!</p>
             </div>
             <div class="info-img-div">
-                <img class="info-img" src="imgs/infoimg.png">
+                <img class="info-img" src="imgs/infoimg.png" alt="info image">
+            </div>
+        </div>
+    </div>
+
+    <!--modal pop up for error for inputting invalid date-->
+   <div class="popup-error">
+        <div class="popup-content">
+            <div class="popup-header">
+                <button class="close-btn-error" type="button">&#x2715;</button>
+            </div>
+            <div>
+                <h2>Uh oh</h2>
+                <p>Please enter a valid date.</p>
+            </div>
+            <div class="error-img-div">
+                <img class="error-img" src="imgs/turniphead.png" alt="error image">
             </div>
         </div>
     </div>

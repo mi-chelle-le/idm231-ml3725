@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+
 @font-face {
     font-family: 'broady';
     src: url('fonts/BROADY.woff2') format('woff2'),
@@ -9,17 +13,7 @@
     src: url('fonts/broady.ttf') format('truetype');
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
-
 :root {
-    --background: #fefaf6;
-    --primary: #666E2F;
-    --secondary: #1e1d1d;
-    --textcolor: #351910;
-    --: #252525;
-
     --font-serif: "Poppins", "Montserrat", Verdana, Tahoma, serif;
     --font-bold: "broady", var(--font-serif);
 }
@@ -36,9 +30,7 @@ body {
     font-family: var(--font-serif);
     color: #fefaf6;
     font-weight: 300;
-    background-color: var(--background);
-    margin: 100;
-    padding: 100;
+    margin: auto;
 }
 
 /* ----------toggle mute btn & help btn---------- */
@@ -55,28 +47,22 @@ header {
     display: inline-block;
     overflow: hidden;
     cursor: pointer;
-}
-/*
-img.volume {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
+    transition: 0.2s ease-in-out;
 }
 
-.togglevolumemute:hover img{
-    opacity: 0;
-    cursor: pointer;
+.togglevolume:hover {
+    transform: scale(1.05);
 }
-
-.togglevolume:hover img.volume {
-    opacity: 1;
-}*/
 
 .infobutton {
     position: relative;
     display: inline-block;
     overflow: hidden;
+    transition: 0.2s ease-in-out;
+}
+
+.infobutton:hover{
+    transform: scale(1.05);
 }
 
 img.infohover {
@@ -93,10 +79,6 @@ img.infohover {
 
 .infobutton:hover img.infohover {
     opacity: 1;
-}
-
-.info {
-    align-items: right;
 }
 
 /* ----------title and calendar style---------- */
@@ -134,18 +116,23 @@ input {
     color:#351910;
     padding: 10px;
     margin: 0 10px;
+    transition: 0.3s ease-in-out;
 }
 
-.input-bday section {
+input:hover {
+    transform: scale(1.1);
+}
+
+.input-bday div {
     display: flex;
     justify-content: center;
     margin: 15px;
 }
 
 .submit-btn {
-    padding: 10px 18px;
+    padding: 10px 20px;
     background: #fefaf6;
-    font-family: var(--font-serif);
+    font-family: Verdana;
     font-size: 22px;
     font-weight: 600;
     color:#351910;
@@ -155,6 +142,11 @@ input {
     cursor: pointer;
     border-radius: 50%;
     margin: 0 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.submit-btn:hover {
+    transform: scale(1.2);
 }
 
 /* ----------zodiac character buttons style---------- */
@@ -177,16 +169,16 @@ input {
     cursor: pointer;
     background-color: inherit;
     appearance: none;
-}
-
-.zodiacbuttons button:hover {
-    transform: scale(1.5);
     transition: .4s ease-in-out;
 }
 
-/* ----------modal pop-up containing character info---------- */
+.zodiacbuttons button:hover {
+    transform: scale(1.4);
+}
 
-.popup, .popup-info {
+/* ----------modal pop-up containing character info, popup for instructions, popup for invalid date error---------- */
+
+.popup, .popup-info, .popup-error {
     position: absolute; 
     left: 0;
     top: 0;
@@ -213,21 +205,12 @@ input {
     transition: transform 2s ease-in-out;
 }
 
-@keyframes scale {
-    from {
-        transform: translate(-50%, -50%) scale(0);
-    }
-    to {
-        transform: translate(-50%, -50%) scale(1);
-    }
-}
-
 .popup img {
     width: 300px;
     margin-bottom: -30px;
 }
 
-.popup h2, .popup-info h2 {
+.popup h2, .popup-info h2, .popup-error h2 {
     font-family: var(--font-bold);
     font-size: 2.75rem;
     font-weight: 300;
@@ -238,19 +221,21 @@ input {
     margin: 10px;
 }
 
-.popup p, .popup-info p {
+.popup p {
     padding: 0 50px;
     font-size: 1.05rem;
 }
+
 .popup-header {
     display: flex;
     justify-content: right;
     margin-bottom: -30px;
 }
-.popup button, .popup-info button {
-    padding: 5px 10px;
+
+.popup button, .popup-info button, .popup-error button {
+    padding: 5px 11px;
     border: none;
-    font-size: 26px;
+    font-size: 25px;
     color:#351910;
     border-radius: 20px;
     background-color: #C28D6B;
@@ -259,19 +244,34 @@ input {
     cursor: pointer;
 }
 
-.popup-info p{
-    margin: 25px;
-    margin-left: 125px;
-    text-align: left;
+.popup-info p {
+    margin: 22px;
+    text-align: center;
     font-size: 1.25rem;
     margin-bottom: 0px;
 }
 
-.info-img-div{
+.popup-error p {
+    margin: 20px;
+    margin-bottom: 5px;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.info-img-div {
     text-align: right;
 }
 
-.info-img{
+.info-img {
     width: 275px;
     margin-right: 50px;
+}
+
+.error-img-div {
+    text-align: center;
+}
+
+.error-img {
+    margin-top: 20px;
+    width: 250px;
 }
